@@ -1,3 +1,3 @@
-# Detailed NTPd Monitoring for Zabbix
+# Node Web Trapper Service
 
-Still in development. Technically functional, 84% complete. Should be considered beta quality until final release.
+Still in development. Should be considered beta quality until final release.
