@@ -86,9 +86,9 @@ if(config.enabled_methods.includes("connect")) app.connect('/', (req,res) => { h
 
 
 // Start the express listener
-app.listen(config.keys.port, () => {
-    var server = express.server
-    var port = express.port
+var listener = app.listen(config.keys.port, () => {
+    var server = listener.address().address
+    var port = listener.address().port
 
-    console.log("Server listening on ${server}:${port}")
+    console.log("Server listening on " + server + ":" + port)
 })
