@@ -8,7 +8,9 @@
 
     "keys": {
         "port": "3000",
-        "host": "localhost"
+        "host": "localhost",
+        "echo": false,
+        "out_dir": "../var/"
     },
 
     "enabled_methods": [
