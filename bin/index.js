@@ -4,13 +4,10 @@ const bodyparser = require('body-parser')
 
 const app = express()
 
-app.use(bodyparser.raw({
-    inflate: true,
-    limit: '100kb',
-    type: 'application/octet-stream'
-}))
+
 
 // Register the raw body middleware
+app.use(bodyparser.raw({}))
 app.use(function(req, res, next) {
     req.rawBody = '';
     req.setEncoding('utf8');
@@ -25,6 +22,7 @@ app.use(function(req, res, next) {
   });
 
 
+
 /**
  * Load the configuration and any overrides from the trapper config file
  */
@@ -34,6 +32,8 @@ config = JSON.parse(configContents)
 function echoRequest(req, res) {
     // Send the request back to the original sender
 }
+
+
 
 /**
  * handRequest(...)
@@ -70,6 +70,8 @@ function handleRequest(req, res) {
 
 }
 
+
+
 // Subscribe to all methods
 if(config.enabled_methods.includes("get")) app.get('/', (req,res) => { handleRequest(req, res) })
 if(config.enabled_methods.includes("post")) app.post('/', (req,res) => { handleRequest(req, res) })
@@ -80,6 +82,7 @@ if(config.enabled_methods.includes("put")) app.put('/', (req,res) => { handleReq
 if(config.enabled_methods.includes("delete")) app.delete('/', (req,res) => { handleRequest(req, res) })
 if(config.enabled_methods.includes("trace")) app.trace('/', (req,res) => { handleRequest(req, res) })
 if(config.enabled_methods.includes("connect")) app.connect('/', (req,res) => { handleRequest(req, res) })
+
 
 
 // Start the express listener
