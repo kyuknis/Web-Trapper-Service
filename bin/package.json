@@ -1,7 +1,7 @@
 {
   "name": "web-trapper-service",
   "version": "1.0.0",
-  "description": "",
+  "description": "Trap web requests and store them in a file. Useful for when developing with asynchronous web services. Meant to be used alongside another application such as Postman",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
