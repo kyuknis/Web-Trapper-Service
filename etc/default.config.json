@@ -1,0 +1,30 @@
+{
+    "config_meta": {
+        "file_name": "default.config.json",
+        "file_type": "json",
+        "file_author": "Kirkland Yuknis <kirkland@yuknis.com",
+        "file_description": "Contains the default configuration for the trapper service. All settings will be overridden by keys in other config files. It is inadvisable to modify this file except for in cases where the modification will be redistributed with the entire application throughout an organization."
+    },
+
+    "keys": {
+        "port": "3000",
+        "host": "localhost"
+    },
+
+    "enabled_methods": [
+        "get",
+        "post",
+        "patch",
+        "options",
+        "head",
+        "put",
+        "delete",
+        "trace",
+        "connect"
+    ],
+
+    "logging": {
+        "mode": "debug",
+        "path": "../var/log/"
+    }
+}
